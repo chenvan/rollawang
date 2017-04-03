@@ -34,7 +34,7 @@ utils/
 
 
 # md file
-.md
+*.md
 
 # 具体文件
 .travis.yml
