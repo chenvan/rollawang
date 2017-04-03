@@ -30,7 +30,7 @@ export default class Footer extends React.Component {
             <span>Background Pic from <a href = 'https://unsplash.com/@ahmadreza_sajadi'>ahmadreza sajadi</a></span>
           </div>
           <div style = {{display: 'flex', justifyContent: 'center'}}>
-            <a>网站源码</a>
+            <a href = 'https://github.com/chenvan/rollawang'>网站源码</a>
           </div>
           <div style = {{display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}}>
             <span>联系方式: </span>
