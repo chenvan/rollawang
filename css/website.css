@@ -152,6 +152,7 @@
   max-width: 960px;
   margin: auto;
   display: flex;
+  min-height: 450px;
 }
 
 .columnDirection {
