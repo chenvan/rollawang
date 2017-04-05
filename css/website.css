@@ -43,6 +43,7 @@
 @media all and (max-width: 699px) {
   .blog {
     flex-direction: column;
+    margin: 0px 10px;
   }
 }
 
@@ -88,36 +89,96 @@
 }
 
 .frontDoor {
-  background: url(http://awangimage.b0.upaiyun.com/website/bgImage.jpg) black;
+  background: url(http://awangimage.b0.upaiyun.com/website/newBgImage.jpg) black;
   background-size: cover;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 576px;
 }
 
-@media all and (min-width: 400px) {
+@media all and (min-width: 956px) {
+  .frontDoor {
+    height: 576px;
+  }
+
   .name {
-   font-size: 100px;
-   line-height: 100px;
+   font-size: 120px;
   }
 
   .loader {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    border-width: 12px;
+    border-top-width: 12px;
+  }
+
+  .project {
+    font-size: 30px;
   }
 }
 
-@media all and (max-width: 399px) {
+@media all and (max-width: 955px) and (min-width: 722px) {
+  .frontDoor {
+    height: 476px;
+  }
+
+  .name {
+   font-size: 90px;
+  }
+
+  .loader {
+    width: 45px;
+    height: 45px;
+    border-width: 9px;
+    border-top-width: 9px;
+  }
+
+  .project {
+    font-size: 25px;
+  }
+}
+
+@media all and (max-width: 721px) and (min-width: 487px) {
+  .frontDoor {
+    height: 376px;
+  }
+
   .name {
    font-size: 60px;
-   line-height: 60px;
   }
 
   .loader {
     width: 30px;
     height: 30px;
+    border-width: 6px;
+    border-top-width: 6px;
+  }
+
+  .project {
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 486px) {
+  .frontDoor {
+    height: 276px;
+  }
+
+  .name {
+   font-size: 30px;
+   line-height: 30px;
+  }
+
+  .loader {
+    width: 15px;
+    height: 15px;
+    border-width: 3px;
+    border-top-width: 3px;
+  }
+
+  .project {
+    font-size: 20px;
   }
 }
 
@@ -125,20 +186,20 @@
 .project {
   display: flex;
   max-width: 960px;
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px auto;
   justify-content: space-around;
-  font-size: 25px;
-  line-height: 25px;
+  //font-size: 20px;
+  //line-height: 20px;
 }
 
 .loader {
-    border: 8px solid #f3f3f3; /* Light grey */
-    border-top: 8px solid #3498db; /* Blue */
     border-radius: 50%;
     animation: spin 1s linear infinite;
     display: inline-block;
+    border-style: solid;
+    border-color: #f3f3f3; /* Light grey */
+    border-top-style: solid;
+    border-top-color: #3498db; /* Blue */
 }
 
 @keyframes spin {

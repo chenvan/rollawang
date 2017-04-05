@@ -28,35 +28,42 @@ export default class RoteVocab extends React.Component {
                   <span>伍君仪</span>
                   <span>透析英语创始人</span>
                   <span>《把你的英语用起来！》作者</span>
-                  <a className = 'customLink'
-                     href = 'http://blog.sina.com.cn/s/blog_4b5cb56b0100088u.html'
-                     style = {{marginTop: '30px', marginBottom: '30px'}}
-                  >
-                    透析学习法详解
-                  </a>
+                  <p style = {{marginTop: '30px'}}>
+                    他的文章：
+                    <a className = 'customLink'
+                       href = 'http://blog.sina.com.cn/s/blog_4b5cb56b0100088u.html'
+                    >
+                      透析学习法详解
+                    </a>
+                  </p>
                 </div>
                 <div className = 'columnDirection' style = {{display: 'flex', alignItems: 'center'}}>
                   <img src = 'http://awangimage.b0.upaiyun.com/website/naiba.png' width = {100} height = {100}/>
                   <span>恶梦的奶爸</span>
                   <span>豆瓣奶爸英语教室创建者</span>
                   <span>《把你的英语用起来！》作者</span>
-                  <a className = 'customLink'
-                     href = 'https://site.douban.com/195168/widget/notes/11656155/note/249838060/'
-                     style = {{marginTop: '30px', marginBottom: '30px'}}
-                  >
-                    透析英语——只读经典
-                  </a>
+                  <p style = {{marginTop: '30px'}}>
+                    他的文章：
+                    <a className = 'customLink'
+                       href = 'https://site.douban.com/195168/widget/notes/11656155/note/249838060/'
+
+                    >
+                      透析英语——只读经典
+                    </a>
+                  </p>
                 </div>
                 <div className = 'columnDirection' style = {{display: 'flex', alignItems: 'center'}}>
                   <img src = 'http://awangimage.b0.upaiyun.com/website/awang.png' width = {100} height = {100}/>
                   <span>AWang</span>
                   <span>透析记词APP作者</span>
-                  <Link className = 'customLink'
-                        to = {prefixLink(this.props.understandingAboutRoteVocab.path)}
-                        style = {{marginTop: '60px', marginBottom: '30px'}}
-                  >
-                    个人对透析法的理解
-                  </Link>
+                  <p   style = {{marginTop: '60px'}}>
+                    他的文章：
+                    <Link className = 'customLink'
+                          to = {prefixLink(this.props.understandingAboutRoteVocab.path)}
+                    >
+                      个人对透析法的理解
+                    </Link>
+                  </p>
                 </div>
               </div>
             </div>
