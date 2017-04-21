@@ -89,7 +89,7 @@
 }
 
 .frontDoor {
-  background: url(http://awangimage.b0.upaiyun.com/website/newBgImage.jpg) black;
+  background: black;
   background-size: cover;
   color: white;
   display: flex;

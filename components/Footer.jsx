@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default class Footer extends React.Component {
-  render() {
+  render () {
     return (
       <footer className = 'footer'>
         <div className = 'container' style = {{paddingTop: '20px', paddingBottom: '10px'}}>
@@ -15,14 +15,17 @@ export default class Footer extends React.Component {
               />
             </a>
             <a className = 'customLink' href = 'https://www.upyun.com/league'>
-              <img src = 'http://awangimage.b0.upaiyun.com/upyun_new_logo_blue.png'
+              <img
+                src = 'http://awangimage.b0.upaiyun.com/upyun_new_logo_blue.png'
                 title = '又拍云联盟'
               />
             </a>
             <a className = 'customLink' href = 'https://pages.github.com/'>
-              <i className = "fa fa-github fa-2x"
-                aria-hidden="true"
+              <img
+                src = 'http://awangimage.b0.upaiyun.com/website/GitHub.svg.png'
                 title = 'github pages'
+                width = {45}
+                height = {45}
               />
             </a>
           </div>
@@ -32,17 +35,27 @@ export default class Footer extends React.Component {
           <div style = {{display: 'flex', justifyContent: 'center'}}>
             <a href = 'https://github.com/chenvan/rollawang'>网站源码</a>
           </div>
-          <div style = {{display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}}>
-            <span>联系方式: </span>
-            <a  className = 'customLink' style = {{margin: '15px'}} href = 'mailto:van1989@foxmail.com'>
-              <i className = "fa fa-envelope fa-2x" aria-hidden="true" title = 'van1989@foxmail.com'/>
+          <div style = {{display: 'flex', justifyContent: 'flex-end'}}>
+            <span>联系方式</span>
+            <a className = 'customLink' style = {{marginRight: '15px', marginLeft: '15px'}} href = 'mailto:van1989@foxmail.com'>
+              <img
+                src = 'http://awangimage.b0.upaiyun.com/website/mail.svg.png'
+                title = 'van1989@foxmail.com'
+                width = {40}
+                height = {30}
+              />
             </a>
             <a className = 'customLink' href = 'http://weibo.com/u/2204264062'>
-              <i className = "fa fa-weibo fa-2x" aria-hidden="true" title = '微博主页'/>
+              <img
+                src = 'http://awangimage.b0.upaiyun.com/website/weibo.svg.png'
+                title = 'AWang的微博'
+                width = {37}
+                height = {30}
+              />
             </a>
           </div>
         </div>
       </footer>
-    );
+    )
   }
 }

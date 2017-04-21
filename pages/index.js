@@ -3,8 +3,7 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 
 export default class Index extends React.Component {
-
-  render() {
+  render () {
     return (
       <div>
         <div className = 'frontDoor'>

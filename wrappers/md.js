@@ -11,33 +11,29 @@ import { Toc } from '../components/SideBar'
 module.exports = React.createClass({
   propTypes () {
     return {
-      router: React.PropTypes.object,
+      router: React.PropTypes.object
     }
   },
   render () {
-    //console.log(this.props)
     const post = this.props.route.page.data
 
-    let navElement = [];
+    let navElement = []
 
-    if(this.props.blogArticleSortList){
-      let keyword = undefined,
-          articleId = this.props.blogArticleSortList.findIndex((article) => {
-            return article.title === post.title
-          }),
-          pathLastIndex = this.props.blogArticleSortList[articleId].path.length - 1,
-          pathSlashIndex = this.props.blogArticleSortList[articleId].path.lastIndexOf('/', pathLastIndex - 1),
-          upperUrl = this.props.blogArticleSortList[articleId].path.slice(0, pathSlashIndex + 1);
+    if (this.props.blogArticleSortList) {
+      let keyword = undefined
+      let articleId = this.props.blogArticleSortList.findIndex((article) => {
+        return article.title === post.title
+      })
+      let pathLastIndex = this.props.blogArticleSortList[articleId].path.length - 1
+      let pathSlashIndex = this.props.blogArticleSortList[articleId].path.lastIndexOf('/', pathLastIndex - 1)
+      let upperUrl = this.props.blogArticleSortList[articleId].path.slice(0, pathSlashIndex + 1)
 
-      //console.log('pathSlashIndex', pathSlashIndex);
-      //console.log('upperUrl', upperUrl);
-
-      //this.props.keyword is undefined or object
-      if(this.props.keyword){
+      // this.props.keyword is undefined or object
+      if (this.props.keyword) {
         [keyword] = Object.values(this.props.keyword)
       }
 
-      if(articleId > 0){
+      if (articleId > 0) {
         navElement.push(
             <li key = 'prev'>
                 <Link to = {prefixLink(this.props.blogArticleSortList[articleId - 1].path)}>
@@ -55,7 +51,7 @@ module.exports = React.createClass({
         </li>
       )
 
-      if(articleId < this.props.blogArticleSortList.length - 1){
+      if (articleId < this.props.blogArticleSortList.length - 1) {
         navElement.push(
           <li key = 'next'>
             <Link to = {prefixLink(this.props.blogArticleSortList[articleId + 1].path)}>
@@ -64,18 +60,25 @@ module.exports = React.createClass({
           </li>
         )
       }
-    }else{
+    } else {
       navElement.push(
-        <li>
-          <a href = '#'
-             key = 'back'
-             onClick = {(e) => {
-               e.preventDefault()
-               this.props.history.goBack()
-             }}
-          >
-            返回
-          </a>
+        <li key = 'back'>
+          {
+            this.props.route.page.path === '/404.html' ? (
+              <Link to = {prefixLink('/')}>
+                返回主页
+              </Link>
+            ) : (
+              <a href = '#'
+                onClick = {(e) => {
+                  e.preventDefault()
+                  this.props.history.goBack()
+                }}
+              >
+                返回
+              </a>
+            )
+          }
         </li>
       )
     }
@@ -101,5 +104,5 @@ module.exports = React.createClass({
         </div>
       </div>
     )
-  },
+  }
 })

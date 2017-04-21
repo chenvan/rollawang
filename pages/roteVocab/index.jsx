@@ -80,13 +80,13 @@ export default class RoteVocab extends React.Component {
             <h2 style = {{alignSelf: 'center'}}>应用下载地址</h2>
             <div style = {{display: 'flex', justifyContent: 'space-around'}}>
               <a href = 'http://www.coolapk.com/apk/com.rotevocabapp'>
-                <img  src = 'http://awangimage.b0.upaiyun.com/website/coolmarket.png' width = {80} height = {80} alt = '酷市场'/>
+                <img src = 'http://awangimage.b0.upaiyun.com/website/coolmarket.png' width = {80} height = {80} alt = '酷市场'/>
               </a>
               <a href = 'http://app.mi.com/details?id=com.rotevocabapp&ref=search'>
-                <img  src = 'http://awangimage.b0.upaiyun.com/website/xiaomi.png'  width = {70} height = {70} alt = '小米应用商店'/>
+                <img src = 'http://awangimage.b0.upaiyun.com/website/xiaomi.png' width = {70} height = {70} alt = '小米应用商店'/>
               </a>
               <a href = 'http://sj.qq.com/myapp/detail.htm?apkName=com.rotevocabapp'>
-                <img  src = 'http://awangimage.b0.upaiyun.com/website/tencent.png'  width = {70} height = {70} alt = '应用宝'/>
+                <img src = 'http://awangimage.b0.upaiyun.com/website/tencent.png' width = {70} height = {70} alt = '应用宝'/>
               </a>
             </div>
             <p style = {{alignSelf: 'center'}}>点击图标即可进入下载地址</p>
@@ -111,7 +111,12 @@ export default class RoteVocab extends React.Component {
           </div>
           <div className = 'showBoard columnDirection' style = {{justifyContent: 'center', alignItems: 'center'}}>
             <h2>开源地址</h2>
-            <i className="fa fa-github fa-3x" aria-hidden="true"/>
+            <img
+              src = 'http://awangimage.b0.upaiyun.com/website/GitHub.svg.png'
+              title = 'github'
+              width = {80}
+              height = {80}
+            />
             <a href = 'https://github.com/chenvan/RoteVocabApp'>
               透析记词
             </a>
