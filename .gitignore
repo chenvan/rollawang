@@ -36,6 +36,6 @@ utils/
 # md file
 *.md
 
-# 具体文件
+# 
 .travis.yml
 netlify.toml

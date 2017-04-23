@@ -7,6 +7,8 @@ export default class Index extends React.Component {
     return (
       <div>
         <div className = 'frontDoor'>
+          <div className = 'stars'></div>
+          <div className = 'twinkling'></div>
           <div className = 'name'>
             <span>AWang </span>
             <span>is R</span>

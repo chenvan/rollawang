@@ -30,7 +30,7 @@ export default class Footer extends React.Component {
             </a>
           </div>
           <div style = {{display: 'flex', justifyContent: 'center', marginBottom: '13px'}}>
-            <span>Background Pic from <a href = 'https://unsplash.com/@ahmadreza_sajadi'>ahmadreza sajadi</a></span>
+            <span>Background twinkling stars from <a href = 'https://codepen.io/WebSonick/'>WebSonick</a></span>
           </div>
           <div style = {{display: 'flex', justifyContent: 'center'}}>
             <a href = 'https://github.com/chenvan/rollawang'>网站源码</a>
