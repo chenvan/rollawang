@@ -1,15 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 import { Categories, Tags } from '../../components/SideBar'
 import ArticleListView from '../../components/ArticleListView'
 import PageNav from '../../components/PageNav'
 
-
-export default class Blog extends React.Component{
-
-  render(){
-    let begin = (this.props.currentPage - 1) * this.props.articleShowNumber;
-    let end = this.props.currentPage * this.props.articleShowNumber;
+export default class Blog extends Component {
+  render () {
+    let begin = (this.props.currentPage - 1) * this.props.articleShowNumber
+    let end = this.props.currentPage * this.props.articleShowNumber
     return (
       <div className = 'container'>
         <div className = 'blog'>
@@ -17,9 +15,12 @@ export default class Blog extends React.Component{
             <div className = 'buttonZone'>
               {
                 this.props.keyword && (
-                  <button className = 'showAllArticle' onClick = {() => {
+                  <button
+                    className = 'showAllArticle'
+                    onClick = {() => {
                       this.props.showKeywordArticleSortList(undefined)
-                    }} >
+                    }}
+                  >
                     显示所有文章
                   </button>
                 )
@@ -70,6 +71,6 @@ export default class Blog extends React.Component{
           </div>
         </div>
       </div>
-    );
+    )
   }
 }

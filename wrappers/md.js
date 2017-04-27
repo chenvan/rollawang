@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router'
 
 import 'css/markdown-styles.css'
@@ -7,13 +7,18 @@ import Helmet from 'react-helmet'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 import { Toc } from '../components/SideBar'
+// import Gitment from 'gitment'
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      router: React.PropTypes.object
+export default class mdWrapper extends Component {
+  componentDidMount () {
+    if (this.props.blogArticleSortList) {
+      const commentScript = document.createElement('script')
+      commentScript.src = 'https://cdn-city.livere.com/js/embed.dist.js'
+      commentScript.async = true
+      document.body.appendChild(commentScript)
     }
-  },
+  }
+
   render () {
     const post = this.props.route.page.data
 
@@ -92,6 +97,13 @@ module.exports = React.createClass({
             />
             <h1>{post.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: post.body }} />
+            {
+              this.props.blogArticleSortList && (
+                <div id = 'commentZone'>
+                  <div id="lv-container" data-id="city" data-uid="MTAyMC8yODM5Mi80OTYz"></div>
+                </div>
+              )
+            }
           </div>
           <div className = 'sideBar'>
             <Toc article = {post.body} />
@@ -105,4 +117,4 @@ module.exports = React.createClass({
       </div>
     )
   }
-})
+}

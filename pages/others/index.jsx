@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 import Header from '../../components/Header'
 
-export default class index extends React.Component {
-
-  render() {
+export default class index extends Component {
+  render () {
     return (
       <div>
         <Header site = 'others' />

@@ -4,8 +4,7 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 
 export default class Header extends React.Component {
-  render() {
-
+  render () {
     let { site } = this.props
 
     return (

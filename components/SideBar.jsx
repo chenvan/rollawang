@@ -1,10 +1,8 @@
-import React from 'react'
-import { Link, Route } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
+import React, { Component } from 'react'
 
-class Categories extends React.Component{
-  render(){
-    let { categories } = this.props;
+class Categories extends Component {
+  render () {
+    let { categories } = this.props
     let table = Object.keys(categories).map((category, index) => {
       return (
         <tr key = {index}>
@@ -18,7 +16,7 @@ class Categories extends React.Component{
           </td>
           <td>{categories[category]}</td>
         </tr>
-      );
+      )
     })
 
     return (
@@ -26,64 +24,59 @@ class Categories extends React.Component{
     )
   }
 
-  _handleClick(category, e) {
-    e.preventDefault();
-    this.props.click({category});
+  _handleClick (category, e) {
+    e.preventDefault()
+    this.props.click({category})
   }
 }
 
-class Tags extends React.Component{
-
-  render(){
-
-    let { tags } = this.props;
+class Tags extends Component {
+  render () {
+    let { tags } = this.props
 
     let tagsCollection = Object.keys(tags).map((tag, index) => {
       let fontSize = Math.floor(16 + tags[tag])
-      fontSize = fontSize > 30 ? 30 : fontSize;
+      fontSize = fontSize > 30 ? 30 : fontSize
       return (
         <a
           href = '#'
           onClick = {this._handleClick.bind(this, tag)}
           key = {index}
-          style = {{fontSize: fontSize+'px'}}
+          style = {{fontSize: fontSize + 'px'}}
         >
           {tag}
         </a>
-
-      );
-    });
+      )
+    })
 
     return <p>{ tagsCollection }</p>
   }
 
-  _handleClick(tag, e) {
-    e.preventDefault();
-    this.props.click({tag});
+  _handleClick (tag, e) {
+    e.preventDefault()
+    this.props.click({tag})
   }
 }
 
-class Toc extends React.Component {
-
-  render() {
+class Toc extends Component {
+  render () {
     let reg = /<h[2-6].*?id="(.+?)".*?>(.+?)<\/h[2-6]>/g
-    let title;
-    let showList = [];
-    while((title = reg.exec(this.props.article)) !== null){
-
-      let id = title[1];
-      let titleName = title[2];
+    let title
+    let showList = []
+    while ((title = reg.exec(this.props.article)) !== null) {
+      let id = title[1]
+      let titleName = title[2]
 
       showList.push(
         <li key = {id}>
-          <a href = {'#'+id}>
+          <a href = {'#' + id}>
             {titleName}
           </a>
         </li>
       )
     }
 
-    if(showList.length > 0){
+    if (showList.length > 0) {
       return (
         <div>
           <p>目录</p>
@@ -92,12 +85,11 @@ class Toc extends React.Component {
           </ul>
           <hr />
         </div>
-      );
-    }
-    else{
-      return null;
+      )
+    } else {
+      return null
     }
   }
 }
 
-export { Categories, Tags, Toc };
+export { Categories, Tags, Toc }

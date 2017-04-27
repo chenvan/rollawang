@@ -30,9 +30,12 @@ export default class Footer extends React.Component {
             </a>
           </div>
           <div style = {{display: 'flex', justifyContent: 'center', marginBottom: '13px'}}>
-            <span>Background twinkling stars from <a href = 'https://codepen.io/WebSonick/'>WebSonick</a></span>
+            <span>首页闪烁星空来自<a href = 'https://codepen.io/WebSonick/'>WebSonick</a></span>
           </div>
-          <div style = {{display: 'flex', justifyContent: 'center'}}>
+          <div style = {{display: 'flex', justifyContent: 'center', marginBottom: '13px'}}>
+            <span>某些图标来自<a href = 'https://github.com/nullice/NViconsLib_Silhouette'>NViconsLib</a></span>
+          </div>
+          <div style = {{display: 'flex', justifyContent: 'center', marginBottom: '13px'}}>
             <a href = 'https://github.com/chenvan/rollawang'>网站源码</a>
           </div>
           <div style = {{display: 'flex', justifyContent: 'flex-end'}}>
@@ -43,6 +46,7 @@ export default class Footer extends React.Component {
                 title = 'van1989@foxmail.com'
                 width = {40}
                 height = {30}
+                style = {{marginBottom: '0px'}}
               />
             </a>
             <a className = 'customLink' href = 'http://weibo.com/u/2204264062'>
@@ -51,6 +55,7 @@ export default class Footer extends React.Component {
                 title = 'AWang的微博'
                 width = {37}
                 height = {30}
+                style = {{marginBottom: '0px'}}
               />
             </a>
           </div>
