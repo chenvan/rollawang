@@ -1,65 +1,73 @@
+@font-face {
+  font-family: 'LilyScriptOne-Regular';
+  src: url('http://awangimage.b0.upaiyun.com/website/LilyScriptOne-Regular.ttf')
+}
+
+
+html {
+  font-family: "Microsoft YaHei", sans-serif;
+  font-size: 20px;
+}
+
+.specialFont {
+  font-family: 'LilyScriptOne-Regular', Arial;
+}
+
+.customLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.customLink:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+
+/* header */
 .header {
-  background-color: #FFF176;
-  margin-bottom: 20px;
-}
-
-.websiteTitle {
-  flex: 1;
-  padding-top: 13px;
-}
-
-.websiteNav {
-  flex: 1;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  & span {
-    margin: 5px;
+  background-color: #000000;
+  & a {
+    color: #FFFFFF;
+  }
+  & a:hover {
+    color: #FFFFFF;
   }
 }
 
+#headTitle {
+  font-family: 'LilyScriptOne-Regular', fantasy;
+  font-size: 5rem;
+  font-weight: bold; 
+  width: fit-content;
+  margin-left: 5%;
+}
+
+/* footer*/
 .footer {
-  background-color: #FFF176;
-  margin-top: 20px;
+  background-color: white;
+  & a {
+    color: #FF9800;
+  };
 }
 
-.container {
-  max-width: 960px;
-  margin: auto;
+.tksListItem {
+  align-self: flex-end;
+  padding: 10px 20px;
 }
 
-@media all and (min-width: 700px) {
-  .main {
-    flex: 3
-  }
-
-  .sideBar {
-    flex: 1;
-    padding-left: 40px;
-  }
-}
-
-
-@media all and (max-width: 699px) {
-  .blog {
-    flex-direction: column;
-    margin: 0px 10px;
-  }
-}
-
-.blog {
-  display: flex;
-}
-
+/* 正文 */
 .main {
   display: flex;
   flex-direction: column;
-}
-
-.sideBar {
-  & a {
-    margin:5px
-  }
+  padding-left: 30px;
+  padding-top: 20px;
+  line-height: 1.5rem;
+  font-size: 1.25rem;
+  & img {
+    width: 100%;
+  };
 }
 
 .buttonZone {
@@ -80,151 +88,71 @@
   }
 }
 
-.mdArticleNav {
-  & span {
-    margin: 5px
+/* side bar */
+
+.sideBar {
+  font-size: 1.25rem;
+  padding-right: 30px;
+  padding-top: 20px
+}
+
+#categories {
+  width: 100%;
+}
+
+#categories tr td:nth-child(2) {
+  text-align: right;
+}
+
+#tags {
+  direction: rtl;
+  & a {
+    margin: 5px;
   }
 }
 
-.frontDoor {
-  background: black;
-  background-size: cover;
+#toc {
+ direction: rtl;
+ font-size: 1rem;
+ line-height: 1.45rem;
+}
+
+#toc li {
+  margin-bottom: 0.8rem;
+}
+
+#webSiteArticleNav {
+  direction: rtl;
+  line-height: 1.45rem;
+  font-size: 1rem;
+}
+
+/* first screen */
+
+#webSiteTitle {
+  font-family: 'LilyScriptOne-Regular', fantasy;
+  font-size: 8.5rem;
+  width: fit-content;
+  margin: auto;
+}
+
+.subScreen {
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 1.75rem;
+  line-height: 2.45rem;
 }
 
-.name {
-  z-index: 3;
+.firstScreen {
+  height: 607.78px;
 }
 
-@media all and (min-width: 956px) {
-  .frontDoor, .stars, .twinkling {
-    height: 576px;
-  }
-
-  .stars {
-    background:#000 url(http://awangimage.b0.upaiyun.com/website/stars_custom1.png) repeat top center;
-    z-index:0;
-  }
-
-  .name {
-   font-size: 100px;
-  }
-
-  .loader {
-    width: 50px;
-    height: 50px;
-    border-width: 10px;
-    border-top-width: 10px;
-  }
-
-  .project {
-    font-size: 30px;
-  }
+.stars, .twinkling {
+  height: 615.78px;
 }
 
-@media all and (max-width: 955px) and (min-width: 722px) {
-  .frontDoor, .stars, .twinkling {
-    height: 476px;
-  }
-
-  .stars {
-    background:#000 url(http://awangimage.b0.upaiyun.com/website/stars_custom1.png) repeat top center;
-    z-index:0;
-  }
-
-  .name {
-   font-size: 80px;
-  }
-
-  .loader {
-    width: 40px;
-    height: 40px;
-    border-width: 8px;
-    border-top-width: 8px;
-  }
-
-  .project {
-    font-size: 25px;
-  }
-}
-
-@media all and (max-width: 721px) and (min-width: 487px) {
-  .frontDoor, .stars, .twinkling {
-    height: 376px;
-  }
-
-  .stars {
-    background:#000 url(http://awangimage.b0.upaiyun.com/website/stars_custom2.png) repeat top center;
-    z-index:0;
-  }
-
-  .name {
-   font-size: 60px;
-  }
-
-  .loader {
-    width: 30px;
-    height: 30px;
-    border-width: 6px;
-    border-top-width: 6px;
-  }
-
-  .project {
-    font-size: 20px;
-  }
-}
-
-@media all and (max-width: 486px) {
-  .frontDoor, .stars, .twinkling {
-    height: 276px;
-  }
-
-  .stars {
-    background:#000 url(http://awangimage.b0.upaiyun.com/website/stars_custom2.png) repeat top center;
-    z-index:0;
-  }
-
-  .name {
-   font-size: 30px;
-   line-height: 30px;
-  }
-
-  .loader {
-    width: 15px;
-    height: 15px;
-    border-width: 3px;
-    border-top-width: 3px;
-  }
-
-  .project {
-    font-size: 20px;
-  }
-}
-
-
-.project {
-  display: flex;
-  max-width: 960px;
-  margin: 50px auto;
-  justify-content: space-around;
-}
-
-.loader {
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    display: inline-block;
-    border-style: solid;
-    border-color: #f3f3f3; /* Light grey */
-    border-top-style: solid;
-    border-top-color: #3498db; /* Blue */
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.stars {
+  background: #000 url(http://awangimage.b0.upaiyun.com/website/stars_custom1.png) repeat top center;
+  z-index: 0;
 }
 
 @keyframes move-twink-back {
@@ -233,13 +161,13 @@
 }
 
 .stars, .twinkling {
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  display:block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  display: block;
 }
 
 .twinkling{
@@ -248,25 +176,67 @@
   animation:move-twink-back 200s linear infinite;
 }
 
-.showBoard {
-  padding-bottom: 60px;
-  padding-top: 60px;
-  max-width: 960px;
+/* General Layout */
+.outerFrame {
+  width: 80%;
   margin: auto;
+  margin-bottom: 0;
+}
+
+.container {
+  flex: 1;
   display: flex;
-  min-height: 450px;
 }
 
-.columnDirection {
-  flex-direction: column;
+.leftSide {
+  flex: 2;
+
 }
 
-.customLink {
-  color: inherit;
-  text-decoration: none;
+.rightSide {
+  flex: 6;
+  border-left: 20px;
+  border-left-style: solid;
+  padding-left: 20px;
 }
 
-.customLink:hover {
-  color: inherit;
-  text-decoration: underline;
+.divideLineBlackColor {
+  border-left-color: black;
 }
+
+.divideLineGreyColor {
+  border-left-color: grey;
+}
+
+.divideLineWhiteColor {
+  border-left-color: white;
+}
+
+/* 三段式的 Layout */
+.upperBlock, .bottomBlock {
+  height: 8rem;
+}
+
+.middleBlock {
+  width: 50%;
+}
+
+.middleBlockElement {
+  width: fit-content;
+  margin: 40px auto; 
+  display: block;
+}
+
+/* roteVocab page Layout*/
+#showBoardWrapperA {
+  background-color: #64B5F6;
+  color: white;
+}
+
+#showBoardWrapperB {
+  background-color: #E57373;
+  color: white;
+}
+
+
+

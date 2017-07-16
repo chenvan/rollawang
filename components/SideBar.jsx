@@ -20,7 +20,7 @@ class Categories extends Component {
     })
 
     return (
-      <table><tbody>{ table }</tbody></table>
+      <table id = 'categories'><tbody>{ table }</tbody></table>
     )
   }
 
@@ -35,8 +35,8 @@ class Tags extends Component {
     let { tags } = this.props
 
     let tagsCollection = Object.keys(tags).map((tag, index) => {
-      let fontSize = Math.floor(16 + tags[tag])
-      fontSize = fontSize > 30 ? 30 : fontSize
+      let fontSize = Math.floor(20 + tags[tag])
+      fontSize = fontSize > 32 ? 32 : fontSize
       return (
         <a
           href = '#'
@@ -49,7 +49,7 @@ class Tags extends Component {
       )
     })
 
-    return <p>{ tagsCollection }</p>
+    return <p id = 'tags'>{ tagsCollection }</p>
   }
 
   _handleClick (tag, e) {
@@ -78,9 +78,9 @@ class Toc extends Component {
 
     if (showList.length > 0) {
       return (
-        <div>
+        <div id = 'toc'>
           <p>目录</p>
-          <ul className = 'Toc'>
+          <ul>
             {showList}
           </ul>
           <hr />

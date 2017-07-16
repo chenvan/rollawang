@@ -89,28 +89,32 @@ export default class mdWrapper extends Component {
     }
 
     return (
-      <div className="container">
-        <div className = 'blog'>
-          <div className = 'main'>
-            <Helmet
-              title={`${config.siteTitle} | ${post.title}`}
-            />
-            <h1>{post.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: post.body }} />
-            {
-              this.props.blogArticleSortList && (
-                <div id = 'commentZone'>
-                  <div id="lv-container" data-id="city" data-uid="MTAyMC8yODM5Mi80OTYz"></div>
-                </div>
-              )
-            }
+      <div className="outerFrame">
+        <div className = 'container'>
+          <div className = 'leftSide'>
+            <div className = 'sideBar'>
+              <Toc article = {post.body} />
+              <div id = 'webSiteArticleNav'>
+                <ul>
+                  {navElement}
+                </ul>
+              </div>
+            </div>
           </div>
-          <div className = 'sideBar'>
-            <Toc article = {post.body} />
-            <div className = 'mdArticleNav'>
-              <ul>
-                {navElement}
-              </ul>
+          <div className = 'rightSide' style = {{borderLeftColor: '#9E9E9E', borderLeftStyle: 'solid'}}>
+            <div className = 'main'>
+              <Helmet
+                title={`${config.siteTitle} | ${post.title}`}
+              />
+              <h1>{post.title}</h1>
+              <div dangerouslySetInnerHTML={{ __html: post.body }} />
+              {
+                this.props.blogArticleSortList && (
+                  <div id = 'commentZone'>
+                    <div id="lv-container" data-id="city" data-uid="MTAyMC8yODM5Mi80OTYz"></div>
+                  </div>
+                )
+              }
             </div>
           </div>
         </div>

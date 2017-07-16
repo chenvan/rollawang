@@ -22,7 +22,7 @@ export default class PageNav extends Component {
 
   render () {
     return (
-      <div className = 'pageNav'>{this.state.pagesView}</div>
+      <div className = 'pageNav' style = {this.props.style}>{this.state.pagesView}</div>
     )
   }
 

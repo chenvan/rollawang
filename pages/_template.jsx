@@ -11,7 +11,7 @@ export default class RootTemplate extends Component {
     return (
       <div>
         { this.props.children }
-        <Footer />
+        <Footer currentPath = {this.props.children.props.location.pathname}/>
       </div>
     )
   }

@@ -32,8 +32,6 @@ module.exports = React.createClass({
             content="width=device-width, initial-scale=1.0"
           />
           {preLoadBundleLink}
-          <link rel='preload' href='http://fonts.gstatic.com/s/arvo/v9/Yl0tppep0-4db_jv2GpmdA.woff2' as="font" type="font/woff2" crossOrigin />
-          <link rel='preload' href='http://fonts.gstatic.com/s/arvo/v9/J0GYVYTizO1mjpT3aOcSbQ.woff2' as="font" type="font/woff2" crossOrigin />
           <link rel='preload' href='http://awangimage.b0.upaiyun.com/website/stars_custom1.png' as='image' media='(min-width: 722px)' />
           <link rel='preload' href='http://awangimage.b0.upaiyun.com/website/stars_custom2.png' as='image' media='(max-width: 721px)' />
           <link rel='preload' href='http://awangimage.b0.upaiyun.com/website/twinkling.png' as='image' />
@@ -42,8 +40,6 @@ module.exports = React.createClass({
           <link rel='preload' href='http://awangimage.b0.upaiyun.com/website/GitHub.svg.png' as='image' />
           <link rel='preload' href='http://awangimage.b0.upaiyun.com/upyun_new_logo_blue.png' as='image' />
           <link rel='preload' href='http://awangimage.b0.upaiyun.com/website/gatsby.png' as='image' />
-          <TypographyStyle typography={typography} />
-          <GoogleFont typography={typography} />
           {css}
         </head>
         <body>

@@ -7,7 +7,7 @@ export default class ArticleListView extends Component {
     let { articleSortList, onlyShowTitle } = this.props
 
     return (
-      <div>
+      <div style = {this.props.style}>
         {
           articleSortList.map((article, index) => {
             return (

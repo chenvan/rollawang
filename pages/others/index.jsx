@@ -7,17 +7,20 @@ export default class index extends Component {
     return (
       <div>
         <Header site = 'others' />
-        <div
-          style = {{
-            maxWidth: '960px',
-            margin: 'auto',
-            minHeight: '550px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '50px'
-          }}>
-          施工中...
+        <div className = 'outerFrame'>
+          <div className = 'container upperBlock'>
+            <div className = 'leftSide'></div>
+            <div className = 'rightSide divideLineBlackColor'>
+            </div>
+          </div>
+          <div className = 'middleBlock'>
+            <h1 className = 'middleBlockElement'>施工中...</h1>
+          </div>
+          <div className = 'container bottomBlock'>
+            <div className = 'leftSide'></div>
+            <div className = 'rightSide divideLineBlackColor'>
+            </div>
+          </div>
         </div>
       </div>
     )
