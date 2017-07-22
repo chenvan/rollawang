@@ -89,7 +89,7 @@ export default class mdWrapper extends Component {
     }
 
     return (
-      <div className="outerFrame">
+      <div className="outerFrame" id = 'md'>
         <div className = 'container'>
           <div className = 'leftSide'>
             <div className = 'sideBar'>
@@ -101,13 +101,13 @@ export default class mdWrapper extends Component {
               </div>
             </div>
           </div>
-          <div className = 'rightSide' style = {{borderLeftColor: '#9E9E9E', borderLeftStyle: 'solid'}}>
+          <div className = 'rightSide divideLineGreyColor'>
             <div className = 'main'>
               <Helmet
                 title={`${config.siteTitle} | ${post.title}`}
               />
               <h1>{post.title}</h1>
-              <div dangerouslySetInnerHTML={{ __html: post.body }} />
+              <div dangerouslySetInnerHTML={{ __html: post.body }} id = 'content' />
               {
                 this.props.blogArticleSortList && (
                   <div id = 'commentZone'>

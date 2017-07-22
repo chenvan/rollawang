@@ -9,7 +9,7 @@ export default class Blog extends Component {
     let begin = (this.props.currentPage - 1) * this.props.articleShowNumber
     let end = this.props.currentPage * this.props.articleShowNumber
     return (
-      <div className = 'outerFrame'>
+      <div className = 'outerFrame' id = 'blogPage'>
         <div className = 'container'>
           <div className = 'leftSide'>
             <div className = 'sideBar'>
@@ -25,11 +25,10 @@ export default class Blog extends Component {
           </div>
           <div className = 'rightSide divideLineBlackColor'>
             <div className = 'main'>
-              <div className = 'buttonZone'>
+              <div id = 'buttonZone'>
                 {
                   this.props.keyword && (
                     <button
-                      className = 'showAllArticle'
                       onClick = {() => {
                         this.props.showKeywordArticleSortList(undefined)
                       }}
@@ -38,7 +37,7 @@ export default class Blog extends Component {
                     </button>
                   )
                 }
-                <form className = 'showTitle'>
+                <form>
                   显示：
                   <label>
                     <input

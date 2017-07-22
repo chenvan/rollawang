@@ -3,53 +3,80 @@
   src: url('http://awangimage.b0.upaiyun.com/website/LilyScriptOne-Regular.ttf')
 }
 
-
 html {
-  font-family: "Microsoft YaHei", sans-serif;
+  font-family: Helvetica, Tahoma, Arial, SimSun, "宋体", Heiti, "黑体", sans-serif;
   font-size: 20px;
+  line-height: 1.4rem;
+}
+
+pre {
+  width: 1px;
 }
 
 .specialFont {
   font-family: 'LilyScriptOne-Regular', Arial;
 }
 
-.customLink {
+a {
   color: inherit;
   text-decoration: none;
 }
 
-.customLink:hover {
+a:hover {
   color: inherit;
   text-decoration: underline;
 }
 
-
 /* header */
-.header {
+#header {
   display: flex;
   background-color: #000000;
-  & a {
-    color: #FFFFFF;
-  }
-  & a:hover {
-    color: #FFFFFF;
-  }
+}
+
+#header a {
+  color: #FFFFFF;
+}
+
+#header a:hover {
+  color: #FFFFFF;
 }
 
 #headTitle {
   font-family: 'LilyScriptOne-Regular', fantasy;
   font-size: 5rem;
-  font-weight: bold; 
+  font-weight: bold;
+  line-height: 7rem; 
   width: fit-content;
   margin-left: 5%;
 }
 
+.headerSubTitle {
+  font-size: 1.5rem;
+  line-height: 2.1rem; 
+  padding-top: 15px; 
+  padding-bottom: 15px;
+}
+
 /* footer*/
-.footer {
+#footer {
   background-color: white;
-  & a {
-    color: #FF9800;
-  };
+}
+
+#footer a {
+  color: #FF9800;
+}
+
+#footerLeftSide {
+  display: flex;
+  flex-direction: column; 
+}
+
+#footerLeftSideWord {
+  align-self: flex-end;
+  padding: 20px 20px 15px 0;
+  direction: rtl;
+  font-size: 1.5rem;
+  line-height: 2.1rem;
 }
 
 .tksListItem {
@@ -63,14 +90,19 @@ html {
   flex-direction: column;
   padding-left: 30px;
   padding-top: 20px;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   font-size: 1.25rem;
-  & img {
-    width: 100%;
-  };
 }
 
-.buttonZone {
+.main img {
+  max-width: 100%;
+}
+
+.main #content a {
+  text-decoration: underline;
+}
+
+#buttonZone {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -78,20 +110,53 @@ html {
   margin-bottom: 10px;
 }
 
+#buttonZone button {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.3em;
+}
+
+h3 {
+  font-size: 1.17em;
+  line-height: 1.29em;
+}
+
+h4 {
+  font-size: 1.0em;
+  line-height: 1.1em;
+}
+
+h1, h2, h3, h4, h5, h6, .sideBar, .subScreen, .headerSubTitle {
+  font-family: Arial, "Microsoft YaHei", "微软雅黑", Heiti, "黑体", serif;
+  font-weight: bold;
+}
+
 .pageNav {
   align-self: center;
+  margin: 1.5rem 0;
+}
 
-  & span {
-    margin: 5px;
-    cursor: pointer;
-    text-decoration: underline;
-  }
+.pageNav span {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.pageNav span:hover {
+  text-decoration: underline;
 }
 
 /* side bar */
-
 .sideBar {
   font-size: 1.25rem;
+  line-height: 1.75rem;
   padding-right: 30px;
   padding-top: 20px
 }
@@ -105,16 +170,19 @@ html {
 }
 
 #tags {
+  display: flex;
+  flex-wrap: wrap;
   direction: rtl;
-  & a {
-    margin: 5px;
-  }
+}
+
+#tags a {
+  margin: 0 5px;
 }
 
 #toc {
  direction: rtl;
  font-size: 1rem;
- line-height: 1.45rem;
+ line-height: 1.4rem;
 }
 
 #toc li {
@@ -123,7 +191,7 @@ html {
 
 #webSiteArticleNav {
   direction: rtl;
-  line-height: 1.45rem;
+  line-height: 1.4rem;
   font-size: 1rem;
 }
 
@@ -132,6 +200,7 @@ html {
 #webSiteTitle {
   font-family: 'LilyScriptOne-Regular', fantasy;
   font-size: 8.5rem;
+  line-height: 11.9rem;
   width: fit-content;
   margin: auto;
 }
@@ -142,7 +211,7 @@ html {
   line-height: 2.45rem;
 }
 
-.firstScreen {
+#firstScreen {
   height: 607.78px;
 }
 
@@ -190,7 +259,6 @@ html {
 
 .leftSide {
   flex: 2;
-
 }
 
 .rightSide {
@@ -205,7 +273,7 @@ html {
 }
 
 .divideLineGreyColor {
-  border-left-color: grey;
+  border-left-color: #BDBDBD;
 }
 
 .divideLineWhiteColor {
@@ -218,18 +286,27 @@ html {
 }
 
 .middleBlock {
-  width: 50%;
+  margin: 40px 0;
 }
 
-.middleBlockElement {
-  width: fit-content;
-  margin: 40px auto; 
-  display: block;
+.middleBlockLeft {
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: fit-content;
+}
+
+.middleBlockRight {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* roteVocab page Layout*/
 #showBoardWrapperA {
-  background-color: #64B5F6;
+  background-color: #2196F3;
   color: white;
 }
 
@@ -238,5 +315,169 @@ html {
   color: white;
 }
 
+#showBoardLeftSideOne {
+  display: flex;
+  justify-content: center;
+  writing-mode: vertical-rl;
+}
+
+#showBoardLeftSideTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#showBoardLeftSideTwo h2 {
+  margin-right: 20px;
+}
+
+#showBoardLeftSideTwo a {
+  display: block;
+  margin: 20px;
+}
+
+#showBoardLeftSideTwo p {
+  margin-right: 20px; 
+  direction: rtl;
+}
+
+#showBoardLeftSideThree {
+  display: flex; 
+  justify-content: center; 
+  writing-mode: vertical-rl;
+}
+
+/* screen width query*/
+
+@media screen and (max-width: 1610px) {
+  .outerFrame {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  html {
+    font-size: 18px;
+  }
+}
 
 
+@media screen and (max-width: 1170px) {
+  #webSiteTitle {
+    font-size: 7rem;
+    line-height: 9.8rem;
+  }
+
+  .subScreen {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
+
+  #firstScreen {
+    height: 457.78px;
+  }
+
+  .stars, .twinkling {
+    height: 465.78px;
+  }
+}
+
+@media screen and (max-width: 966px) {
+  #webSiteTitle {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  #headTitle {
+    font-size: 4rem;
+    line-height: 5.6rem;
+  }
+  
+  .headerSubTitle {
+    font-size: 1.3rem;
+    line-height: 1.82rem;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  
+  /* general layout */
+  .container {
+    margin-left: 50px;
+  }
+
+  /** container **/
+  #firstScreen .container, #header .container, #md .container,
+  #roteVocabPage .container, #othersPage .container {
+    flex-direction: column;
+  }
+
+  #footer .container, #blogPage .container {
+    flex-direction: column-reverse;
+  }
+
+  /** left side **/
+  #footer .leftSide, #blogPage .leftSide, #othersPage .leftSide,
+  #md .leftSide, #roteVocabPage .leftSide {
+    border-left: 20px;
+    border-left-style: solid;
+    padding-left: 20px;
+  }
+
+  #footer .leftSide, #blogPage .leftSide, #othersPage .leftSide {
+    border-left-color: black;
+  }
+
+  #md .leftSide, #roteVocabPage .leftSide {
+    border-left-color: #BDBDBD;
+  }
+
+  /** 三段式 **/
+  .middleBlockLeft {
+    align-self: flex-start;
+  }
+  
+  /* first screen */
+  #webSiteTitle {
+    margin-left: 10px;
+  }
+
+  #firstScreen {
+    height: 647.78px;
+  }
+
+  .stars, .twinkling {
+    height: 655.78px;
+  }
+  
+  /* header */
+  #headTitle {
+    margin-left: 0;
+  }
+
+  /* footer */
+  #footerLeftSideWord {
+    align-self: flex-start;
+    direction: ltr;
+  }
+
+  .tksListItem {
+    align-self: flex-start;
+    padding: 10px 0;
+  }
+  
+  /* sidebar */
+  #webSiteArticleNav, #toc, #tags {
+    direction: ltr;
+  }
+
+  /* roteVocabPage */
+  #showBoardLeftSideOne, #showBoardLeftSideThree {
+    writing-mode: horizontal-tb;
+    justify-content: flex-start;
+  }
+
+  #showBoardLeftSideTwo {
+    align-items: flex-start;
+  }
+}

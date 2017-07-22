@@ -37,7 +37,7 @@ class ArticleRow extends Component {
       )
     } else {
       return (
-        <div>
+        <div className = 'content'>
           <h1>{article.title}</h1>
           <div dangerouslySetInnerHTML = {{__html: article.shortContent}} />
           <h4><Link to = { prefixLink(article.path) }>Read More</Link></h4>

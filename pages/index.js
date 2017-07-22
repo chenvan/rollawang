@@ -5,7 +5,7 @@ import { prefixLink } from 'gatsby-helpers'
 export default class Index extends React.Component {
   render () {
     return (
-      <div className = 'firstScreen' style = {{display: 'flex'}}>
+      <div id = 'firstScreen' style = {{display: 'flex'}}>
           <div className = 'stars'></div>
           <div className = 'twinkling'></div>
           <div className ='outerFrame' style = {{zIndex: 3, color: 'white'}}>

@@ -7,14 +7,15 @@ export default class index extends Component {
     return (
       <div>
         <Header site = 'others' />
-        <div className = 'outerFrame'>
+        <div className = 'outerFrame' id ='othersPage'>
           <div className = 'container upperBlock'>
             <div className = 'leftSide'></div>
             <div className = 'rightSide divideLineBlackColor'>
             </div>
           </div>
-          <div className = 'middleBlock'>
-            <h1 className = 'middleBlockElement'>施工中...</h1>
+          <div className = 'container middleBlock'>
+            <h1 className = 'middleBlockLeft'>施工中...</h1>
+            <div className = 'middleBlockRight'></div>
           </div>
           <div className = 'container bottomBlock'>
             <div className = 'leftSide'></div>
